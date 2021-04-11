@@ -1,0 +1,138 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+body{
+	background-color:#F8C788;
+	width:1150px;
+	margin:auto;
+}
+header{
+	width:1150px;
+	height:300px;
+	background-color:#0199A9;
+}
+header h2{
+	font-family: 'Yusei Magic', sans-serif;
+	font-size:100pt;
+	margin-left:20px;
+	color:white;
+}
+header p{
+	font-family: 'Roboto', sans-serif;
+	font-size:40pt;
+	text-align:right;
+	margin-right:20px;
+	color:#F8C788;
+}
+nav{
+	width:1150px;
+	height:60px;
+	background-color:#F28963;
+	text-align:right;
+}
+nav li{
+	display:inline-block;
+	margin-left:40px;
+	margin-right:20px;
+	padding-top:8px;
+}	
+nav li a{
+	font-family: 'Yusei Magic', sans-serif;
+	font-size:18pt;
+	text-decoration:none;
+	color:#0199A9;
+}
+nav li a:hover{
+	color:white;
+}
+section, #about{
+	width:1120px;
+	height:700px;
+	background-color:#F8C788;
+	border-left:5px solid #0199A9;
+	border-right:5px solid #0199A9;
+	padding:15px 10px;
+}
+section h1, #about h2{
+	font-family: 'Yusei Magic', sans-serif;
+	color:#0199A9;
+	font-size:30pt;
+	margin-bottom:30px;
+}
+section p, #about p{
+	font-family: 'Roboto', sans-serif;
+	font-size:14pt;
+	color:black;
+	margin-bottom:30px;
+}
+
+.col{
+	width:300px;
+	height:420px;
+	/* background-color:silver; */
+	padding:10px;
+}
+.col:hover{
+	background-color:rgba(255,255,255,0.3);
+}
+
+.col h3{
+	font-family: 'Yusei Magic', sans-serif;
+	color:#0199A9;
+	font-size:20pt;
+	text-align:center;
+	margin-bottom:30px;
+}
+.col img{
+	display:block;
+	margin:auto;
+	margin-bottom:20px;
+}
+.col p{
+	font-family: 'Roboto', sans-serif;
+	font-size:10pt;
+	color:black;
+	margin-bottom:15px;
+	text-align:justify;
+}
+section li{
+	display:inline-block;
+	margin-left:35px;
+}
+
+
+
+footer{
+	width:1150px;
+	height:150px;
+	background-color:#0199A9;
+	text-align:center;
+}
+
+footer li{
+	display:inline-block;
+	margin-right:25px;
+}
+footer li a{
+	font-size:16pt;
+	font-family: 'Yusei Magic', sans-serif;
+	color:white;
+	text-decoration:none;
+	line-height:100pt;
+}
+footer li a:hover{
+	/* text-decoration:underline; */
+	color:#F28963;
+}
+
+#about iframe{
+	display:block;
+	margin:auto;
+	margin-top:50px;
+}
+
+
+
+

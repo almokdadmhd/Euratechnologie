@@ -1,0 +1,302 @@
+ <!DOCTYPE html>
+  <html>
+    
+	<head>
+		
+		<title>Diamond painting</title>
+		
+			<!--Import Google Icon Font-->
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<!--Import materialize.css-->
+			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			<!--Let browser know website is optimized for mobile-->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+		
+		<style>
+			/* General */
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		#wrap {
+			position: relative;
+			top:0;
+			-webkit-transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
+			-moz-transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
+			-ms-transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
+			-o-transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
+			transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);
+		}
+		/* le menu */
+		#nav {
+			position: fixed;
+			top: 0; left:0; right: 0;
+			padding: 1em 0;
+			margin:0;
+			background:#600C0D;
+			text-align:center;
+			font-size: 1em;
+			height:2em;
+			z-index:10;
+		}
+		#nav li {
+			display: inline;
+			margin:0;
+		}
+		#nav a {
+			display: inline-block;
+			margin: 0 3em;
+			color:#FACABB;
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		#nav a:hover{
+			text-decoration: underline;
+		}
+		/* Les sections - background */
+		#slide1, #slide2, #slide3, #slide4 {
+			height: 1000px;
+			padding-top:40px;
+			-webkit-transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);
+			-moz-transition: background-position 1.4s cubic-bezier(.49,.22,.52,1.35);
+			-ms-transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);
+			-o-transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);
+			transition: background-position 1.4s  cubic-bezier(.49,.22,.52,1.35);
+		}
+		#slide1{background:url(dp1.jpg) center center fixed; background-size:cover;}
+		#slide2{background: url(dp5.jpg) center center fixed; background-size:cover;}
+		#slide3{background: url(dp7.jpg) center center fixed; background-size:cover;}
+		#slide4{background:url(dp6.jpg) center center fixed; background-size:cover;}
+		
+		/* Les cibles */
+
+		#s1:target ~ #wrap { top:0px; }
+		#s1:target ~ #wrap #slide1 { background-position: 50% 0%; }
+		#s1:target ~ #wrap #slide2 { background-position: 50% -35%; }
+		#s1:target ~ #wrap #slide3 { background-position: 50% -60%; }
+		#s1:target ~ #wrap #slide4 { background-position: 50% -85%; }
+		
+		#s2:target ~ #wrap { top:-1000px; }
+		#s2:target ~ #wrap #slide1 { background-position: 50% 36%; }
+		#s2:target ~ #wrap #slide2 { background-position: 50% 0%; }
+		#s2:target ~ #wrap #slide3 { background-position: 50% -30%; }
+		#s2:target ~ #wrap #slide4 { background-position: 50% -60%; }
+		
+		#s3:target ~ #wrap { top:-2150px; }
+		#s3:target ~ #wrap #slide1 { background-position: 50% 60%; }
+		#s3:target ~ #wrap #slide2 { background-position: 50% 35%; }
+		#s3:target ~ #wrap #slide3 { background-position: 50% 0%; }
+		#s3:target ~ #wrap #slide4 { background-position: 50% -30%; }
+		
+		#s4:target ~ #wrap { top:-3150px; }
+		#s4:target ~ #wrap #slide1 { background-position: 50% 85%; }
+		#s4:target ~ #wrap #slide2 { background-position: 50% 60%; }
+		#s4:target ~ #wrap #slide3 { background-position: 50% 35%; }
+		#s4:target ~ #wrap #slide4 { background-position: 50% 0%; }
+		
+		#slide1 h1{
+			font-family: 'Potta One', cursive;
+			font-size:45pt;
+			text-align:center;
+			color:#FACABB;
+		}
+		#slide1 p{
+			font-family: 'Indie Flower', cursive;
+			font-size:15pt;
+			color:#F2F0F0;
+			text-align:center;
+		}
+		#slide1 img{
+			width:600px;
+			height:auto;
+			padding-left:15em;
+			diplay:center;
+		}
+		#slide2 h2{
+			font-family: 'Potta One', cursive;
+			font-size:35pt;
+			text-align:center;
+			color:#FACABB;
+		}
+		#slide2 p{
+			font-family: 'Indie Flower', cursive;
+			font-size:10pt;
+			color:#F2F0F0;
+			text-align:center;
+		}
+		.col{
+			width:350px;
+			height:350px;
+			<!-- padding:10px; -->
+		}
+		.col:hover{
+			background-color:rgba(255,255,255,0.3);
+		}
+		.col h3{
+			font-family:black;
+			color:#7E9EDE;
+			font-size:20pt;
+			text-align:center;
+			<!-- margin-bottom:30px; -->
+		}
+		.col img{
+			display:block;
+			margin:auto;
+			margin-bottom:20px;
+			width:250px;
+			height:auto;
+		}
+		#slide2 li{
+			display:inline-block;
+			<!-- margin-left:20px; -->
+}
+		#slide3 p{
+			font-family: 'Indie Flower', cursive;
+			font-size:15pt;
+			color:white;
+			text-align:center;
+		}
+		#slide3 h3{
+			font-family: 'Potta One', cursive;
+			font-size:35pt;
+			text-align:center;
+			color:#FACABB;
+			padding-top:40px;
+		}
+		#slide3 iframe{
+		display:block;
+		margin:auto;
+		margin-top:50px;
+		padding:20px;
+	}
+	.forme{
+		width:250px;
+		height:80px;
+		background:red;
+		margin:auto;
+		border-radius:300px 10px;
+		border:5px double white;
+				
+	}
+	.forme a{
+		text-align:center;
+		display:block;
+		line-height:50px;
+		font-family:Tahoma;
+		font-size:22pt;
+		font-weight:900;
+		text-decoration:none;
+		color:white;
+	}
+	.forme a:hover{
+		text-decoration:underline;
+		color:red;
+	}
+	.forme:hover{
+		background:white;
+	}
+	#slide4 p{
+		font-family: 'Indie Flower', cursive;
+		font-size:12pt;
+		color:white;
+		text-align:center;
+		<!-- padding:30px; -->
+	}
+	#slide4 img{
+		width:350px;
+		height:auto;
+		display:block;
+		margin:auto;
+		
+	}
+		</style>
+	</head>
+
+    <body>
+	
+		<!-- éléments cachés pour jouer avec :target -->
+	<span id="s1"></span>
+	<span id="s2"></span>
+	<span id="s3"></span>
+	<span id="s4"></span>
+	<!-- Le gros conteneur qui va glisser -->
+	<div id="wrap">
+	 	<!-- La navigation -->
+		<ul id="nav">
+			<li><a href="#s1">Item1</a></li>	
+			<li><a href="#s2">Item2</a></li>
+			<li><a href="#s3">Item3</a></li>
+			<li><a href="#s4">Item4</a></li>
+		</ul>
+		
+		<div id="slide1">
+			<h1>Diamond painting c'est quoi?</h1>
+			<p>Le diamond painting c'est quoi? C'est la première chose que je me suis posé en découvrant cette activité. j'ai découvert via des vidéos qu'il fallait poser des "diamants" sur une toile préalablement préparé avec de la colle coulée ou des bandes doubles face. J'ai voulu me lancer dans cette activité pour plusieurs raisons que vous découvrirez ci-dessous</p>
+			<img src="img/dp.jpg" alt=""/>
+		</div> 
+		
+		<div id="slide2">
+			<h2>Pourquoi se loisir?</h2>
+			<p>J'ai commencé le diamond painting, aussi appelé "DP", quand je me suis rendu compte d'être trop présente sur mon téléphone. Il me fallait une activité qui me faire décroché un peu des écran, et par la même occasion me canalisé en cas de crise de nerf. Ca me permet de me concentré sur autre chose pendant minimum 3h. Je ne pratique pas cette activité depuis longtemps (1mois) mais je voit déjà du changement donc j'espére ne pas m'en lasser un jour car ca m'aide beaucoup.</p>
+		<ul>
+				<li>
+					<div class="col"/>
+						<h3>Créations</h3>
+						<img src="dp2.jpg" alt=""/>
+						<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
+					</div>
+				</li>
+				<li>
+					<div class="col"/>
+						<h3>Les outils</h3>
+						<img src="img/dp.jpg" alt=""/>
+						<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
+					</div>
+				</li>
+				<li>
+					<div class="col"/>
+						<h3>En savoir plus</h3>
+						<img src="dp4.jpg" alt=""/>
+						<!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> -->
+					</div>
+				</li>
+			</ul>
+			
+			<p>Je conseille a toute personne ayant beaucoup d'angoisse a essayerse loisir. au personne créatifs et patients, au personne qui ont besoin de se contenir d'essayer au moins une fois de se concentré sur une diamond painting, cela aide beaucoup pour certaine phobie, certains charactére et certaine maladies</p>
+		</div>
+		
+		<div id="slide3">
+			<h3>découverte</h3>
+				<p>Je vous partage cette vidéo qui es pour ceux qui veulent commencé cette activité.</p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/kgtUJYisANM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="forme">				
+				<li><a href="https://www.youtube.com/results?search_query=diamond+painting+fran%C3%A7ais" target="_blank">Youtube</a></li>
+				</div>
+		</div>
+		<div id="slide4">
+			<h4>Les bien-faits</h4>
+			<p>Faire du Diamond Painting vous permet de vous engager dans une activité dans laquelle vous effectuez des actions répétitives, et la concentration contribue a augmenter votre concentration. Ceci est particulièrement bénéfique pour les enfants qui ont une capacité d'attention réduite et qui ont besoin d'activités pour les tenir occupés et les éloigner de leurs écrans.</p>			
+			<p>Faire de la Broderie de Diamant est une activité qui demande beaucoup de temps et d'attention. Comme mentionné ci dessus, passer trop de temps sur les écrans peut entraîner une augmentation des symptômes d'anxiété et de stress, et cette occupation vous donnera une excuse pour vous tenir éloigné de votre téléphone. Cela peut aider à améliorer votre humeur.</p>						
+			<img src="dp1.jpg" alt="">
+			<p>Les mouvements sont similaires et répétitifs lorsque vous créez. Ces actions peuvent stimuler votre mémoire musculaire et aider à améliorer les facultés motrices, cela peut être une façon amusante d'enseigner aux jeunes enfants</p>			
+			<p>Lorsque vous peignez avec des diamants, vous apprenez en réalisant les mouvements et les techniques encore et encore. Cela aide également à développer de meilleures habitudes d'apprentissage en général.</p>			
+			<p>La Broderie Diamant est un exercice très méthodique et thérapeutique. On peut renforcer la discipline en adoptant de bonnes habitudes, c'est un outil très utile qui permet d'améliorer celle ci, en prenant de bonnes habitudes.</p>
+			<img src="dp7.jpg" alt="">
+		</div>
+	</div>
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+		<footer>
+			<ul>
+				<li><a href="">Item1</a></li>
+				<li><a href="">Item2</a></li>
+				<li><a href="">Item3</a></li>
+			</ul>
+		</footer>
+	
+	</body>
+  </html>

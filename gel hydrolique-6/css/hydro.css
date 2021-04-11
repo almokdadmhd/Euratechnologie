@@ -1,0 +1,107 @@
+body {
+  background: #e3fcf5;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.titre {
+  width: 100%;
+  height: 860px;
+  background: url(../img/titre.jpg) no-repeat center center;
+  background-size: 1380px;
+}
+
+.titre h1 {
+  font-family: "Hachi Maru Pop", cursive;
+  color: purple;
+  font-size: 47pt;
+}
+
+.titre h2 {
+  font-family: "Londrina Solid", cursive;
+  color: #9b0004;
+  font-size: 17pt;
+  margin-left: 45px;
+}
+
+.acheter {
+  width: 350px;
+  height: 170px;
+  background: red;
+  margin-left: 75px;
+  margin-top: 100px;
+}
+.acheter:hover {
+  background: purple;
+}
+
+.acheter a p,
+img {
+  display: inline-block;
+}
+.acheter p {
+  font-family: "Londrina Solid", cursive;
+  font-size: 17pt;
+  margin-left: 10px;
+  margin-bottom: -60px;
+  color: black;
+}
+
+.acheter:hover p {
+  color: yellow;
+}
+.acheter img {
+  margin-top: 10px;
+}
+
+.dec {
+  font-size: 30pt;
+  text-decoration: none;
+  margin-left: 160px;
+  margin-top: 100px;
+  text-decoration: overline underline;
+  text-shadow: 2px 2px 3px black;
+}
+
+.formulaire {
+  width: 100%;
+  height: 860px;
+  background: url(../img/sale.jpg) 100% 100% fixed;
+}
+
+.remplir {
+  width: 39%;
+  height: 500px;
+  background: RGB(155, 155, 155, 0.9);
+  margin: auto;
+}
+
+.remplir h1 {
+  font-size: 25pt;
+  font-family: "Hachi Maru Pop", cursive;
+  color: purple;
+  text-align: center;
+}
+
+.remplir p {
+  font-size: 16pt;
+  text-align: center;
+  width: 450px;
+  margin: auto;
+}
+.thune {
+  width: 100%;
+  height: 800px;
+  background: url(../img/thune.jpg) no-repeat center center;
+  background-size: 1366px;
+}
+
+.fond {
+  width: 50%;
+  height: 40%;
+  background: purple;
+  margin: auto;
+  display: block;
+  margin-top: -100px;
+}

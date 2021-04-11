@@ -1,0 +1,127 @@
+body{
+	background:white;
+}
+img{
+	width:150px;
+	height:150px;
+	display:block;
+	margin:auto;
+}
+/*Basic style*/
+.imgprofil, .imgprofil1, .imgprofil2, .imgprofil3, .imgprofil4, .imgprofil5, .imgprofil6, .imgprofil7{
+	width:150px;
+	height:150px;
+	overflow:hidden; 
+	/*overflow permet de gérer le dépassement de contenu - hidden, cache tout ce qui dépasse.*/
+	-webkit-border-radius:150px;
+	-moz-border-radius:150px;
+	-o-border-radius:150px;
+	-ms-border-radius:150px;
+	border-radius:150px; 
+	/*permet d'arrondir les coins(ou angles) d'un élément.*/
+	display:block;
+	margin:auto;
+	/* je centre ma div*/
+	margin-top:50px;
+	border:5px groove #989898;
+	box-shadow: 0 0 5px 5px grey; 
+	/* permet d'ajouter un effet d'ombre à un élément HTML - decalage horizontale, decalage verticale, le flou, le grossissement du flou , couleur de l'ombre*/
+}
+			/* interaction div 1 */
+			
+			/* point de départ*/
+			.imgprofil {
+				-webkit-transition: all 0.7s linear 0s;
+				transition: all 0.7s linear 0s;
+			}
+			
+			/* point d'arrivée*/
+			.imgprofil:hover {
+				-webkit-transform:scale(1.3);
+				transform:scale(1.3);
+				}
+				
+			/* interaction div 2 */
+			
+			.imgzoom{
+				-webkit-transition: all 0.7s ease;
+				transition: all 0.7s ease;
+			}
+			
+			.imgprofil1:hover .imgzoom{
+				-webkit-transform:scale(1.3);
+				transform:scale(1.3);
+			}
+/* interaction div 3 */
+			
+			.imgdezoom{
+				-webkit-transform:scale(1.3);
+				transform:scale(1.3);
+				-webkit-transition: all 0.7s ease;
+				transition: all 0.7s ease;
+			}
+			
+			.imgprofil2:hover .imgdezoom{
+				-webkit-transform:scale(1);
+				transform:scale(1);
+			
+			}
+/* interaction div 4 */
+			.imgprofil3 {
+				-webkit-transition: all 0.7s ease;
+				transition: all 0.7s ease;
+			}
+			
+			.imgprofil3:hover {
+				-webkit-transform:scale(0.5);
+				transform:scale(0.5);
+				}
+				
+/* interaction div 5 */
+			
+			.imgprofil4 {
+				-webkit-transition: all 0.7s ease;
+				transition: all 0.7s ease;
+			}
+			
+			.imgprofil4:hover {
+				-webkit-transform:rotate(360deg);
+				transform:rotate(360deg);
+				}	
+/* interaction div 6 */
+			
+			.rotateimg {
+				-webkit-transition: all 0.7s ease;
+				transition: all 0.7s ease;
+			}
+			
+			.imgprofil5:hover .rotateimg{
+				-webkit-transform: rotate(-360deg);
+				transform: rotate(-360deg);
+
+			}
+/* interaction div 7 */
+	.imgprofil6{
+		transition:all 0.7s ease;
+		-webkit-transition:all 0.7s ease;
+	}
+	.imgprofil6:hover{
+		-webkit-transform: rotateX(-360deg);
+				transform: rotateX(-360deg);
+	}
+
+/* interaction div 8 */
+	.flip{
+		transition:all 0.7s ease;
+		-webkit-transition:all 0.7s ease;
+	}
+	.imgprofil7:hover .flip{
+		-webkit-transform: rotateY(-360deg);
+				transform: rotateY(-360deg);
+				
+	}
+
+
+			
+				
+				
